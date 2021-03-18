@@ -10,7 +10,7 @@ class Determina extends Model
 {
     use HasFactory;
     use SoftDeletes;
-    protected $fillable= [''];
+    protected $fillable= ['clientes_id','avaliacaos_id'];
     public function Cliente(){
         return $this->belongsToMany(Cliente::class, 'clientes', 'clientes_id');
     }

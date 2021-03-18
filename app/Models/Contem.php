@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Contem extends Model
 {
-    protected $fillable= [''];
+    protected $fillable= ['prestadors_id', 'redes-_socials_id'];
     use HasFactory;
     use SoftDeletes;
 

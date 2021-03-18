@@ -15,8 +15,8 @@ class CreateDeterminasTable extends Migration
     {
         Schema::create('determinas', function (Blueprint $table) {
             $table->id();
-            $table->foreign('cliente')->references('id')->on('clientes');
-            $table->foreign('avaliacao')->references('id')->on('avaliacaos');
+            $table->foreign('clientes_id')->references('id')->on('clientes');
+            $table->foreign('avaliacaos_id')->references('id')->on('avaliacaos');
             $table->timestamps();
             $table->softDeletes();
         });

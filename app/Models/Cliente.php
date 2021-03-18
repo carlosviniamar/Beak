@@ -13,6 +13,6 @@ class Cliente extends Model
     use SoftDeletes;
 
     public function Endereco(){
-        return $this->hasMany(Endereco::class, 'clientes_id');
+        return $this->hasMany(Endereco::class, 'enderecos_id');
     }
 }

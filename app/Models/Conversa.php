@@ -10,7 +10,7 @@ class Conversa extends Model
 {
     use HasFactory;
     use SoftDeletes;
-    protected $fillable= [''];
+    protected $fillable= ['mensagem','clientes_id','prestadors_id'];
     public function Cliente(){
         return $this->belongsToMany(Cliente::class, 'clientes', 'clientes_id');
     }

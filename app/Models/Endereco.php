@@ -10,5 +10,5 @@ class Endereco extends Model
 {
     use HasFactory;
     use SoftDeletes;
-    protected $fillable= [''];
+    protected $fillable= ['rua', 'numero', 'bairro', 'complemento', 'cidade', 'estado'];
 }

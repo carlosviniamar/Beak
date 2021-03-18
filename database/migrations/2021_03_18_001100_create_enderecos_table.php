@@ -18,7 +18,9 @@ class CreateEnderecosTable extends Migration
             $table->string('rua');
             $table->string('numero');
             $table->string('bairro');
-            $table->string('');
+            $table->string('complemento');
+            $table->string('cidade');
+            $table->string('estado', 2);
             $table->timestamps();
             $table->softDeletes();
         });

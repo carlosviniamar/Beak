@@ -10,7 +10,7 @@ class Servico extends Model
 {
     use HasFactory;
     use SoftDeletes;
-    protected $fillable= ['titulo', 'descricao', 'tempo-estimado'];
+    protected $fillable= ['titulo', 'descricao', 'tempo-estimado', 'preco', 'categorias_id'];
 
     public function Categoria(){
         return $this->hasMany(Categoria::class, 'categorias_id');

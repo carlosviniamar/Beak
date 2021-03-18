@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Avaliacao extends Model
 {
-    protected $fillable= [''];
+    protected $fillable= ['nota','comentario'];
     use HasFactory;
     use SoftDeletes;
 }

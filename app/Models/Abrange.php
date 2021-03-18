@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Abrange extends Model
 {
-    protected $fillable= [''];
+    protected $fillable= ['servicos_id','avaliacaos_id'];
     use HasFactory;
     use SoftDeletes;
     public function Servico(){
