@@ -19,6 +19,7 @@ class CreateServicosTable extends Migration
             $table->text('descricao');
             $table->string('tempo-servico');
             $table->float('preco');
+            $table->unsignedBigInteger('categorias_id');
             $table->foreign('categorias_id')->references('id')->on('categorias');
             $table->softDeletes();
             $table->timestamps();

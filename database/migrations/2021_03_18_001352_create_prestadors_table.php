@@ -17,9 +17,10 @@ class CreatePrestadorsTable extends Migration
             $table->id();
             $table->string('nome');
             $table->string('e-mail');
-            $table->integer('cpf', 14);
+            $table->integer('cpf');
             $table->string('telefone');
-            $table->foreign('rede-_socials-id')->references('id')->on('rede-_socials');
+            $table->unsignedBigInteger('rede-_socials_id');
+            $table->foreign('rede-_socials_id')->references('id')->on('rede-_socials');
             $table->timestamps();
             $table->softDeletes();
         });

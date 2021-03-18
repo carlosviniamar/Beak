@@ -19,6 +19,7 @@ class CreateClientesTable extends Migration
             $table->integer('cpf');
             $table->string('email');
             $table->integer('telefone');
+            $table->unsignedBigInteger('enderecos_id');
             $table->foreign('enderecos_id')->references('id')->on('enderecos');
             $table->timestamps();
             $table->softDeletes();

@@ -15,7 +15,9 @@ class CreateAbrangesTable extends Migration
     {
         Schema::create('abranges', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('servicos_id');
             $table->foreign('servicos_id')->references('id')->on('servicos');
+            $table->unsignedBigInteger('avaliacaos_id');
             $table->foreign('avaliacaos_id')->references('id')->on('avaliacaos');
             $table->timestamps();
             $table->softDeletes();
