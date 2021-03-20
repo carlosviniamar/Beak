@@ -7,7 +7,12 @@
         <title>Beak</title>
 
         <!-- Fonts -->
+        <!-- Bootstrap CSS -->
+
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/dddeb25458.js" crossorigin="anonymous"></script>
+
 
         <!-- Styles -->
         <style>
@@ -19,30 +24,139 @@
                 font-family: 'Nunito', sans-serif;
             }
         </style>
-    </head>
-    <body class="antialiased">
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-            @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                    @auth
-                        <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline">Dashboard</a>
-                    @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Registrar</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-                
 
 
+<nav class="navbar navbar-expand-sm navbar-dark bg-warning">
+    <div class="container bg-warning">
+  <!--Logo-->
+      <a class="" href="">
+        <h1>BeAk</h1>
+      </a>
+
+      <!--Responsivo-->
+    <div class="collapse navbar-collapse">
 
 
-                </div>
-            </div>
+      </div>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navegacao"><!--nav target é o id da div q vai aparecer--> <!--navbar-toggler é a alternancia-->
+          <span class="navbar-toggler-icon"></span> <!--Botao hamburguer-->
+        </button>
+        <!--Navegação-->
+        <div class="navbar-collapse" id="navegacao"> <!--Esconder os itens usando collapse-->
+          <!--
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="" class="nav-link ">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link">Recursos</a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link">Benefícios</a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link">Preço</a>
+            </li>
+          </ul>
+        -->
+          <button class=" ml-auto btn btn-outline-dark ml-4">
+            <a href="{{ route('login') }}" class="text-sm">Login</a>
+          </button>
+          <button class="btn btn-outline-dark ml-4">
+            <a href="{{ route('register') }}" class="text-sm ">Registre-se</a>
+          </button>
         </div>
+      </div>
+
+
+    </div>
+
+    </nav>
+    </head>
+
+    <body>
+        </div>
+            <div class="container">
+                <div class="row"> <!-- INICIO TEXTO INICIAL-->
+                    <div class="col-md-12 ">
+                        <h1 class="text-center mt-5"> De qual serviço tu precisas? </h1>
+                        <h2 class="text-center mt-3"> Tu pode selecionar um dos serviços abaixo... <h2>
+                    </div>
+                </div> <!-- FIM TEXTO INICIAL-->
+
+                <div class="row"> <!-- INICIO LISTA DE BOTÕES-->
+                <div class="col-md-12 text-center">
+                    <button class="btn btn-outline-warning mt-3">
+                    <a href="" class="text-lg ">Tecnologia</a>
+                    </button>
+                    <button class="btn btn-outline-warning mt-3 ml-5">
+                    <a href="" class="text-lg ">Pedreiro</a>
+                    </button>
+                    <button class="btn btn-outline-warning mt-3 ml-5">
+                    <a href="" class="text-lg ">Eletrecista</a>
+                    </button>
+                    <button class="btn btn-outline-warning mt-3 ml-5">
+                    <a href="" class="text-lg ">Pintor</a>
+                    </button>
+                    <button class="btn btn-outline-warning mt-3 ml-5">
+                    <a href="" class="text-lg ">Limpador de Ar-condicionado</a>
+                    </button>
+                </div>
+                </div> <!-- FIM LISTA DE BOTÕES-->
+
+                    <div class="row mt-4">
+                        <div class="col-md-12 d-flex justify-content-center ">
+                            <h2>...ou podes pesquisar diretamente pelo serviço que desejas! </h2>
+                        </div>
+
+                    </div>
+
+                    <div class="row  ">
+                        <div class="col-md-12 d-flex justify-content-center ">
+                            <form class="form-inline mt-3">
+                                <input class="form-control mr-sm-2 text-warning" type="search" style="width:500px"   placeholder="Pesquisar" aria-label="Search">
+                                <button class="btn btn-outline-warning my-2 my-sm-0"  type="submit">Pesquisar</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row"> <!-- 2º Item -->
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <a href=""><i class="fas fa-tools text-warning btn btn-lg "></i></a>
+                                </div>
+                                <div class="col-md-6">
+                                    v class="col-md-6">
+                                    <a href=""><i class="fas fa-tools text-warning fa-lg "></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-6 mt-5">
+                                    <h4>Fácil de Usar</h4>
+                                        <p>
+                                            Pellentesque scelerisque condimentum molestie. Phasellus sodales ipsum et risus sodales, at congue lorem mattis. Morbi ultricies eu nulla id ultricies. Proin tincidunt dolor accumsan eros posuere pellentesque.
+                                        </p>
+                                </div>
+                                <div class="col-md-6 mt-">
+                                    <h4>Fácil de Usar</h4>
+                                        <p>
+                                            Pellentesque scelerisque condimentum molestie. Phasellus sodales ipsum et risus sodales, at congue lorem mattis. Morbi ultricies eu nulla id ultricies. Proin tincidunt dolor accumsan eros posuere pellentesque.
+                                        </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+            </div> <!-- Fim do container -->
+                <footer> <!-- RODAPÉ-->
+                    <div class="mt-2 pt-4 pb-4 p-3 mb-2 bg-warning text-dark text-center fixed-bottom">2021/1 por Carlos e Keucilene</div>
+                </footer>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </body>
+
 </html>
