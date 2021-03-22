@@ -15,12 +15,12 @@ class CreateDeterminasTable extends Migration
     {
         Schema::create('determinas', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('clientes_id');
+            $table->unsignedBigInteger('users_id');
+            $table->foreign('users_id')->references('id')->on('users');
             $table->unsignedBigInteger('avaliacaos_id');
-            $table->foreign('clientes_id')->references('id')->on('clientes');
             $table->foreign('avaliacaos_id')->references('id')->on('avaliacaos');
-            $table->timestamps();
             $table->softDeletes();
+            $table->timestamps();
         });
     }
 

@@ -15,12 +15,11 @@ class CreateContemsTable extends Migration
     {
         Schema::create('contems', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('prestadors_id');
-            $table->unsignedBigInteger('rede-_socials_id');
-            $table->foreign('prestadors_id')->references('id')->on('prestadors');
-            $table->foreign('rede-_socials_id')->references('id')->on('rede-_socials');
+            $table->unsignedBigInteger('redes-_socials_id');
+            $table->foreign('redes-_socials_id')->references('id')->on('redes-_socials');
+            $table->unsignedBigInteger('users_id');
+            $table->foreign('users_id')->references('id')->on('users');
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 

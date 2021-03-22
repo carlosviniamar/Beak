@@ -30,7 +30,7 @@
     <div class="container bg-warning">
   <!--Logo-->
       <a class="" href="">
-        <h1>BeAk</h1>
+        <h1>Beak</h1>
       </a>
 
       <!--Responsivo-->
@@ -43,7 +43,7 @@
         </button>
         <!--Navegação-->
         <div class="navbar-collapse" id="navegacao"> <!--Esconder os itens usando collapse-->
-          <!--
+
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
               <a href="" class="nav-link ">Home</a>
@@ -58,7 +58,7 @@
               <a href="" class="nav-link">Preço</a>
             </li>
           </ul>
-        -->
+
           <button class=" ml-auto btn btn-outline-dark ml-4">
             <a href="{{ route('login') }}" class="text-sm">Login</a>
           </button>
@@ -119,14 +119,16 @@
                             </form>
                         </div>
                     </div>
-                    <div class="row"> <!-- 2º Item -->
+                    <!-- 2º Item -->
+                    <!--
+                    <div class="row">
                         <div class="col-md-6">
                             <div class="row">
                                 <div class="col-md-6">
                                     <a href=""><i class="fas fa-tools text-warning btn btn-lg "></i></a>
                                 </div>
                                 <div class="col-md-6">
-                                    v class="col-md-6">
+
                                     <a href=""><i class="fas fa-tools text-warning fa-lg "></i></a>
                                 </div>
                             </div>
@@ -148,6 +150,7 @@
                             </div>
                         </div>
                     </div>
+                    -->
 
             </div> <!-- Fim do container -->
                 <footer> <!-- RODAPÉ-->

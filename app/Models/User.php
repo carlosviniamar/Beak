@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Http\Livewire\RedeSocial;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -10,6 +11,7 @@ use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Jetstream\HasTeams;
 use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class User extends Authenticatable
 {
@@ -19,6 +21,7 @@ class User extends Authenticatable
     use HasTeams;
     use Notifiable;
     use TwoFactorAuthenticatable;
+    use SoftDeletes;
 
     /**
      * The attributes that are mass assignable.
@@ -26,7 +29,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password','cpf','celular','enderecos_id','redes-_socials_id','servicos_id',
     ];
 
     /**
@@ -58,4 +61,15 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    //dados
+    public function Servicos(){
+       return $this->belongsToMany(Servico::class, 'servicos', 'servicos_id');
+    }
+    public function Rede_Social(){
+        return $this->belongsToMany(RedeSocial::class, 'redes-_socials', 'redes-_socials_id');
+     }
+     public function Avaliacao(){
+        return $this->belongsToMany(Avaliacao::class, 'avaliacaos', 'avalicaos_id');
+     }
 }
